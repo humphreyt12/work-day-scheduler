@@ -5,63 +5,54 @@ $(function () {
   var myDay = [
     {
       id: "0",
-      hour: "09",
       time: "09",
       meridam: "am",
       memo: "",
     },
     {
       id: "1",
-      hour: "10",
       time: "10",
       meridam: "am",
       memo: "",
     },
     {
       id: "2",
-      hour: "11",
       time: "11",
       meridam: "am",
       memo: "",
     },
     {
       id: "3",
-      hour: "12",
       time: "12",
       meridam: "pm",
       memo: "",
     },
     {
       id: "4",
-      hour: "01",
       time: "01",
       meridam: "pm",
       memo: "",
     },
     {
       id: "5",
-      hour: "02",
       time: "02",
       meridam: "pm",
       memo: "",
     },
     {
       id: "6",
-      hour: "03",
       time: "03",
       meridam: "pm",
       memo: "",
     },
     {
       id: "7",
-      hour: "04",
       time: "04",
       meridam: "pm",
       memo: "",
     },
     {
       id: "8",
-      hour: "05",
       time: "05",
       meridam: "pm",
       memo: "",
@@ -87,26 +78,75 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?//
-  var currentHour = "09"
+  var currentHour = dayjs().format('hh:mm:ss');
+  var hour = document.getElementById("hour-10");
+  var hour = document.getElementById("hour-11");
+  var hour = document.getElementById("hour-12");
+  var hour = document.getElementById("hour-1");
+  var hour = document.getElementById("hour-2");
+  var hour = document.getElementById("hour-3");
+  var hour = document.getElementById("hour-4");
+  var hour = document.getElementById("hour-5");
 
   if (myDay > currentHour) {
     var hour = document.getElementById("hour-9");
     hour.classList.remove("id");
   }
-else {(myDay > currentHour) 
+else if(myDay > currentHour)  {
   var hour = document.getElementById("hour-10");
   hour.classList.remove("id");
 }
 
+else if 
+(myDay > currentHour) {
+  var hour = document.getElementById("hour-11");
+  hour.classList.remove("id");
+}
 
+else if 
+(myDay > currentHour) {
+  var hour = document.getElementById("hour-12");
+  hour.classList.remove("id");
+}
 
+else if 
+(myDay > currentHour) {
+  var hour = document.getElementById("hour-01");
+  hour.classList.remove("id");
+}
+
+else if 
+(myDay > currentHour) {
+  var hour = document.getElementById("hour-02");
+  hour.classList.remove("id");
+}
+
+else if 
+(myDay > currentHour) {
+  var hour = document.getElementById("hour-03");
+  hour.classList.remove("id");
+}
+
+else if 
+(myDay > currentHour) {
+  var hour = document.getElementById("hour-04");
+  hour.classList.remove("id");
+}
+
+else if 
+(myDay > currentHour) {
+  var hour = document.getElementById("hour-05");
+  hour.classList.remove("id");
+}
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?//
   var memo = document.querySelector("#memo");
   localStorage.setItem("memo", memo);
  
-
+function saveMemo() {
+  localStorage.setItem("myDay", JSON.stringify(myDay));
+}
   // TODO: Add code to display the current date in the header of the page.
   setInterval(function getHeaderDate(){
   const currentDay = dayjs();
