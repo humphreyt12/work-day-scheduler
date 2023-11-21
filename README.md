@@ -3,6 +3,8 @@
 ## Description 
 Modified starter code to create a simple calendar application that allows a user to save events for each hour of a typical working day (9am to 5pm) by. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
+<img src="./Assets/WorkDaySchedulerScreenShot.jpeg" alt = "A screen shot of the Work Day Scheduler"/>
+
 ## Installation
 N/A
 
@@ -16,3 +18,4 @@ Used
 Please refer to the LICENSE in the repo.
 
 ## Live Website 
+https://humphreyt12.github.io/work-day-scheduler/
